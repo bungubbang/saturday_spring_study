@@ -24,16 +24,11 @@ JAVA Reflection
 		- 물론......세상이 좋아져서 다른 언어들도 유사하게 지원한다. (PHP, Python, javascript, Scala)
 	- Spring에서는?
 		1. HttpServletRequest로 전달된 인자를 JavaBean으로 바로 set?
-			
-			@RequestMapping(value = "/create", method = RequestMethod.GET)
-	    	public String appCreatePage( App app ) {
-	        	return "test";
-	    	}
-
-    	2. ModelBinding
-    		- 필드명이나 get*, set* 등의 메소드를 찾아 불러와 유사 Model Binding 가능
-
+		<pre>@RequestMapping(value = "/create", method = RequestMethod.GET)
+		public String appCreatePage( App app ) {
+    		return "test";
+		}</pre>
+	 	2. ModelBinding
+    		- 필드명이나 get\*, set\* 등의 메소드를 찾아 불러와 유사 Model Binding 가능
     	3. Library 제작
     		- 라이브러리나 범용유틸리티 제작시, Method명을 찾아서 실행하거나 Binding 시킬 수 있다.
-
-
